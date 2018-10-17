@@ -4,6 +4,8 @@ Some utility functions to do the obvious things you want to do with CSV files.
 
 `csv` is easy, this is EZ.
 
+Install it: `pip install ezcsv`
+
 Should be compatible with Python 2.5+ and 3.x
 
 I say "should be" because there are no tests! Please see 'Contributing', below.
