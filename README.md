@@ -4,6 +4,10 @@ Some utility functions to do the obvious things you want to do with CSV files.
 
 `csv` is easy, this is EZ.
 
+Should be compatible with Python 2.5+ and 3.x
+
+I say "should be" because there are no tests! Please see 'Contributing', below.
+
 
 ## Reference
 
@@ -70,4 +74,12 @@ Should have a .csv extension. `mkdir` will malfunction if it doesn't.
 
    If true, creates the directory tree leading up to `csv_path`, ignoring
 if directories already exist.
+
+
+## Contributing
+
+This could really use some tests!
+
+Feel free to fork and open a pull request. Please, one pull request per
+functional change.
 

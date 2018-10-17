@@ -128,7 +128,7 @@ def __mkdirp(csv_path):
             dirname = csv_path
         try:
             os.makedirs(dirname)
-        except OSError as exc:
+        except OSError as exc:  # Python >2.5
             if exc.errno == errno.EEXIST and os.path.isdir(dirname):
                 pass
             else:
