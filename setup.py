@@ -10,7 +10,7 @@ with open(os.path.join(".", "README.md"), encoding="utf-8") as f:
 
 setup(
     name="ezcsv",
-    version="0.1",
+    version="0.2",
     description="Functions to do obvious things with CSVs",
     long_description=long_description,
     long_description_content_type="text/markdown",

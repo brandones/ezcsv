@@ -81,7 +81,7 @@ def write_lists(data, csv_path, mkdir=False):
         writer.writerows(data)
 
 
-def write_dicts(data, csv_path, mkdir=False, silent_fail=False):
+def write_dicts(data, csv_path, mkdir=False, silent_fail=False, fieldnames=None):
     """
     Writes the input data to a CSV file
 
@@ -109,8 +109,9 @@ def write_dicts(data, csv_path, mkdir=False, silent_fail=False):
             raise ValueError("Can't write CSV with no data")
     if mkdir:
         __mkdirp(csv_path)
+    output_fieldnames = fieldnames or data[0].keys()
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, data[0].keys())
+        writer = csv.DictWriter(f, output_fieldnames)
         writer.writeheader()
         writer.writerows(data)
 

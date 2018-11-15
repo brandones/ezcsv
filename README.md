@@ -46,19 +46,24 @@ Windows or not.
 - **`data`** `list[dict]`
 
    One dict per line. The first dict is expected to contain all of the
-keys that will form the header line.
+keys that will form the header line, unless `fieldnames` is provided.
 - **`csv_path`** `string | Path`
 
    Should have a .csv extension. `mkdir` will malfunction if it doesn't.
 - **`mkdir`** `bool`
 
    If true, creates the directory tree leading up to `csv_path`, ignoring
-if directories already exist.
-
+if directories already exist. Default: `False`
 - **`silent_fail`**: `bool`
 
     If `true`, causes the method to do nothing if `data` happens
-to be empty.
+to be empty. Default: `False`
+- **`fieldnames`**: `list[str]`
+
+    If set, provides the list of field names to be passed to `csv.DictWriter`.
+These are written as the header, regardless of what keys are present in
+the first dict in `data`. Default: `None`
+    
 
 #### `write_lists(data, csv_path, mkdir=False)`
 
