@@ -27,7 +27,7 @@ Returns the data at `file_path` as a list of lists. Ignores blank lines.
    
 Example Usage:
 ```
->>> from easycsv import csv_as_list
+>>> from ezcsv import csv_as_list
 >>> filepath = 'C:\\path\\to\\file.csv'
 >>> print(filepath)
 C:\path\to\file.csv
